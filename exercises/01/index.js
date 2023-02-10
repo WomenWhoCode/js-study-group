@@ -10,7 +10,7 @@ const calculateTotal = (array) => {
     const totalParagraph = document.querySelector('#total');
     let sumTotal = 0;
     array.forEach(number => sumTotal += number)
-    totalParagraph.textContent = `Total: $${sumTotal}`
+    totalParagraph.textContent = `Total $${sumTotal}`
 }
 
 const handleFormSubmit = () => {
