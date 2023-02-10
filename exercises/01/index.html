@@ -4,52 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
     <title>Coding Warmer - E1 </title>
 </head>
 <body>
-    
-   
-        <h1>Purchase Receipt</h1>
-        
-       
+    <main class="flex-column">
+        <h1 class="general-padding">Purchase Receipt</h1>
         <section>
-            <div> 
-             <div>
-                 <ion-label>Article:</ion-label>
-             </div>
-               <div>
-                  <input placeholder="Example: Apples" id="description">
-               </div>
-            </div>
-
-            <div>
-                <div>
-                    <ion-label>Amount:</ion-label>
+            <form> 
+                <div class="flex-row">
+                    <label for="description">Article</label>
+                    <input placeholder="Example: Apples" id="description" required>
                 </div>
-                <div>
-                    <input placeholder="Example: $3" id="amount">
+                
+                <div class="flex-row">
+                    <label for="amount">Amount</label>
+                    <span>$</span><input type="number" placeholder="Example: 3" id="amount" required>
                 </div>
-            </div>
-
-            <div>
                 <div>
                     <button>Calculate Total</button>
                 </div>
-            </div>
+            </form>
 
-            <div>
-                <div>
+            <div class="flex-column general-padding">
+                <p><span aria-hidden="true">=============</span>Your Receipt<span aria-hidden="true">=============</span></p>
+                <div class="flex-row">
                     <ul id="ticket">
                         <!--List of ticket articles here-->
                     </ul>
                 </div>
             </div>
-            <p id="total">
-                Total: <!--Total here-->
+            <p id="total" >
+                <!--Total here-->
             </p>
         </section>
-    
+    </main>
 </body>
 <script src="index.js"></script>
 </html>
