@@ -1,0 +1,22 @@
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+.keys {
+  display: flex;
+}
+.key {
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(58, 53, 53, 0.4);
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
