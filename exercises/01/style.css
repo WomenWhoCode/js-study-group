@@ -1,0 +1,78 @@
+.typography {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+}
+.container {
+  width: 376px;
+  background: #ffffff;
+  padding-block-start: 66px;
+}
+.input-container {
+  display: flex;
+  flex-direction: row;
+  padding-inline-start: 38px;
+  padding-inline-end: 53px;
+  margin-block-end: 26px;
+  align-items: center;
+  justify-content: space-between;
+}
+.label-typography {
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+.input-box {
+  width: 209px;
+  height: 28px;
+  background: #d9d9d9;
+  border-color: none;
+}
+.total {
+  width: 283px;
+  height: 36px;
+  background: #620d4f;
+  border-radius: 20px;
+  margin-inline-start: 40px;
+  margin-inline-end: 53px;
+  margin-block-start: 19px;
+}
+.text {
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.receipt {
+  margin-block-start: 79px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-inline-start: 38px;
+  margin-inline-end: 35px;
+}
+.divider {
+  border: 2px solid #000000;
+  width: 309px;
+  margin-inline-start: 37px;
+  margin-inline-end: 30px;
+  margin-block-start: 33px;
+}
+.sum {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  margin-inline-start: 70px;
+}
+.ticket {
+  margin-inline-start: 33px;
+  margin-inline-end: 53px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.input-data {
+  line-height: 0px;
+}

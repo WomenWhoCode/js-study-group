@@ -1,22 +1,24 @@
-let form = document.getElementById("receiptForm");
+let receiptForm = document.getElementById("receiptForm");
 let totalSum = 0;
-form.addEventListener("submit", (event) => {
+receiptForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let article = document.getElementById("article").value;
   let amount = +document.getElementById("amount").value;
+  let ticketContainer = document.getElementById("ticketContainer");
+  let total = document.getElementById("sum");
 
   event.target.reset();
 
-  let ticketContainer = document.getElementById("ticketContainer");
   const ticket = `
     <div class="ticket">
-        <p class="article font-style"> ${article}</p>
-        <p class="article font-style">$${amount}</p>
+        <p class="input-data font-style"> ${article}</p>
+        <p class="input-data font-style">$${amount}</p>
     </div>
     `;
+
   ticketContainer.innerHTML += ticket;
-  let total = document.getElementById("sum");
-  totalSum = totalSum + amount;
+
+  totalSum += amount;
   total.innerHTML = totalSum;
 });
