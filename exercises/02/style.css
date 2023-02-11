@@ -6,14 +6,24 @@ html {
   display: flex;
 }
 .key {
-  border-radius: 0.5rem;
-  margin: 1rem;
-  font-size: 1.5rem;
+  width: 60px;
+  height: 70px;
+  border-radius: 2px;
+  border: 2px solid black;
+  margin: 10px;
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transition: all 0.07s ease;
-  width: 10rem;
-  text-align: center;
+}
+.keyboard-key {
   color: white;
-  background: rgba(58, 53, 53, 0.4);
+  font-size: 30px;
+}
+.sound {
+  color: #ffc600;
 }
 .playing {
   transform: scale(1.1);
