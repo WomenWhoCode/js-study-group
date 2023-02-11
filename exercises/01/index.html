@@ -4,50 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Coding Warmer - E1 </title>
 </head>
 <body>
-    
-   
         <h1>Purchase Receipt</h1>
-        
-       
         <section>
-            <div> 
+            <div class="form-row"> 
              <div>
-                 <ion-label>Article:</ion-label>
+                 <label>Article:</label>
              </div>
                <div>
                   <input placeholder="Example: Apples" id="description"/>
                </div>
             </div>
 
-            <div>
+            <div class="form-row">
                 <div>
-                    <ion-label>Amount:</ion-label>
+                    <label>Amount:</label>
                 </div>
                 <div>
-                    <ion-input placeholder="Example: $3" id="amount"></ion-input>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <button>Calculate Total</button>
+                    <input placeholder="Example: $3" id="amount"/>
                 </div>
             </div>
 
             <div>
-                <div>
-                    <ul id="ticket">
-                        <!--List of ticket articles here-->
-                    </ul>
-                </div>
+                    <button id="btn">Calculate Total</button>
             </div>
-            <p id="total">
-                Total: <!--Total here-->
-            </p>
+
+            <div id="productList">
+            
+            </div>
         </section>
     
 </body>
