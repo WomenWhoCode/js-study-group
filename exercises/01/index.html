@@ -8,15 +8,11 @@
     <title>Coding Warmer - E1 </title>
 </head>
 <body>
-    
-   
         <h1>Purchase Receipt</h1>
-        
-       
         <section>
             <div> 
              <div>
-                 <ion-label>Article:</ion-label>
+                 <label>Article:</label>
              </div>
                <div>
                   <input placeholder="Example: Apples" id="description"/>
@@ -25,29 +21,25 @@
 
             <div>
                 <div>
-                    <ion-label>Amount:</ion-label>
+                    <label>Amount:</label>
                 </div>
                 <div>
-                    <ion-input placeholder="Example: $3" id="amount"></ion-input>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <button>Calculate Total</button>
+                    <input placeholder="Example: $3" id="amount" />
                 </div>
             </div>
 
             <div>
-                <div>
-                    <ul id="ticket">
+                <button>Calculate Total</button>
+            </div>
+
+            <div>
+                <ul id="ticket">
                         <!--List of ticket articles here-->
-                    </ul>
-                </div>
-            </div>
+                </ul>
             <p id="total">
                 Total: <!--Total here-->
             </p>
+        </div>
         </section>
     
 </body>
