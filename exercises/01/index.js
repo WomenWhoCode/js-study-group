@@ -1,42 +1,35 @@
 const $ = document;
 const ARTICLE_DESCRIPTION = $.getElementById('description');
-const AMOUNT_INPUT = $.getElementById('amount');
+const ARTICLE_AMOUNT = $.getElementById('amount');
 const BUTTON = $.getElementById('btn');
 const TOTAL = $.getElementById('total');
 const LIST = $.getElementById('ticket');
+const PRODUCT_OUTPUT = $.getElementById('productList');
 const items = [];
 
-/*
-    - can optimize for the performance
-    - can add enum or interface kind in JS for the DOM elements?
-*/
-
-const updateTotal = (items) => {
-    TOTAL.innerHTML = getTotal(items)
+const updateDOM = ( items) => {
+    printItems(items);
+   const itemsListandTotal =  printItems(items) + getTotal(items);
+   PRODUCT_OUTPUT.innerHTML = itemsListandTotal;
 }
 
-const updateDOM = (items) =>{
-    LIST.innerHTML = printItems(items)
-}
-
-const getArticles = (e) => {
+const getArticlesList = (e) => {
     e.preventDefault();
     const itemName = ARTICLE_DESCRIPTION.value;
-    const itemPrice = Number(AMOUNT_INPUT.value);
+    const itemPrice = Number(ARTICLE_AMOUNT.value);
     items.push({itemName, itemPrice });
     
     if(items.length){
-        updateTotal(items);
-        updateDOM(items)
+        updateDOM(items);
     }
 }
 
 const getTotal = (items) => {
     let intialTotal = 0;
-    items.map((value) => {
-        intialTotal = value.itemPrice + intialTotal;
-    })  
-   return intialTotal;
+     const total = items.reduce((accum, currentValue) => {
+       return accum + currentValue.itemPrice
+    },intialTotal )  
+     return `<p>Total $: ${total} </p>`;
 }
 
 const printItems = (items) => {
@@ -44,7 +37,7 @@ const printItems = (items) => {
      items.map((value) => {
         initalDOM = initalDOM + `<li>${value.itemName} : <span>$${value.itemPrice}</span></li>`;
     })  
-    return initalDOM
+    return `<ul>${initalDOM}</ul>`
 }
 
-BUTTON.addEventListener( 'click', getArticles);
+BUTTON.addEventListener( 'click', getArticlesList);
