@@ -8,7 +8,7 @@ const items = [];
 
 /*
     - can optimize for the performance
-    - can we have the enum or interface kind in JS for the DOM elements?
+    - can add enum or interface kind in JS for the DOM elements?
 */
 
 const updateTotal = (items) => {
@@ -42,7 +42,7 @@ const getTotal = (items) => {
 const printItems = (items) => {
     let initalDOM = '';
      items.map((value) => {
-        initalDOM = initalDOM + `<li>${value.itemName} : ${value.itemPrice}</li>`;
+        initalDOM = initalDOM + `<li>${value.itemName} : <span>$${value.itemPrice}</span></li>`;
     })  
     return initalDOM
 }
