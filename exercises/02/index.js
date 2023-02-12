@@ -1,23 +1,31 @@
 const $ = document;
 const AUDIO = $.getElementsByTagName('audio');
+const AUDIO_LIB = {};
+
+const init = () => {
+    for(let i= 0; i < AUDIO.length; i++){
+        const key = AUDIO[i].getAttribute('data-key');
+        const src = AUDIO[i].getAttribute('src');
+        AUDIO_LIB[key] = src;
+    }
+}
 
 const playAudio = (keycode) => {
-    for(let i = 0; i <= AUDIO.length; i++){
         try{
-            if(AUDIO[i].getAttribute('data-key', keycode)){
-                AUDIO[i].play();
-                break;
+            if(AUDIO_LIB[keycode]){
+              const audio = $.querySelector(`audio[data-key="${keycode}" ]`); 
+              audio.play();
             }
-            else{
-                console.log('Press the correct key')
-            }
-        }
+        } 
         catch(error){
             console.log(error)
         }    }
-}
 
 window.addEventListener('keyup',(e) =>{
     keycode = e.keyCode; // eslint throw error that keyCode is deprectated now
     playAudio(keycode);
+});
+
+window.addEventListener('load',(e) =>{
+   init();
 });
