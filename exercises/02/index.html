@@ -3,57 +3,112 @@
 <head>
     <meta charset="UTF=8">
     <title>JS Drum Kit - E2</title>
+    <style>
+        html { box-sizing: border-box; }
+        
+        *, *::before, *::after { box-sizing: inherit; }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .keys {
+            width: 80%;
+            display: grid; 
+            grid-template-columns: repeat(9, 1fr);
+            gap: 20px;
+            padding-top: 10%;
+        }
+
+        .key {
+            background-color: #999;
+            border: 3px solid black;
+            border-radius: 5px;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Text shadow values sourced from Close and Heavy example here: https://designshack.net/articles/css/12-fun-css-text-shadows-you-can-copy-and-paste/ */
+        kbd {
+            text-transform: uppercase;
+            font-size: 60px;
+            color: #fff;
+            text-shadow: 
+                0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+        }
+
+        .sound {
+            color: #ffc500;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 
+                0px 4px 3px rgba(0,0,0,0.4),
+                0px 8px 13px rgba(0,0,0,0.1),
+                0px 18px 23px rgba(0,0,0,0.1);
+        }
+
+    </style>
 </head>
 <body>
 
 <div class="keys">
-    <div data-key="KeyA" class="key">
+    <div data-code="KeyA" class="key">
         <kbd>A</kbd>
         <span class="sound">clap</span>
     </div>
-    <div data-key="KeyS" class="key">
+    <div data-code="KeyS" class="key">
         <kbd>S</kbd>
         <span class="sound">hihat</span>
     </div>
-    <div data-key="KeyD" class="key">
+    <div data-code="KeyD" class="key">
         <kbd>D</kbd>
         <span class="sound">kick</span>
     </div>
-    <div data-key="KeyF" class="key">
+    <div data-code="KeyF" class="key">
         <kbd>F</kbd>
         <span class="sound">openhat</span>
     </div>
-    <div data-key="KeyG" class="key">
+    <div data-code="KeyG" class="key">
         <kbd>G</kbd>
         <span class="sound">boom</span>
     </div>
-    <div data-key="KeyH" class="key">
+    <div data-code="KeyH" class="key">
         <kbd>H</kbd>
         <span class="sound">ride</span>
     </div>
-    <div data-key="KeyJ" class="key">
+    <div data-code="KeyJ" class="key">
         <kbd>J</kbd>
         <span class="sound">snare</span>
     </div>
-    <div data-key="KeyK" class="key">
+    <div data-code="KeyK" class="key">
         <kbd>K</kbd>
         <span class="sound">tom</span>
     </div>
-    <div data-key="KeyL" class="key">
+    <div data-code="KeyL" class="key">
         <kbd>L</kbd>
         <span class="sound">tink</span>
     </div>
 </div>
 
-<audio data-key="KeyA" src="media/clap.wav"></audio>
-<audio data-key="KeyS" src="media/shaker.wav"></audio>
-<audio data-key="KeyD" src="media/kick.wav"></audio>
-<audio data-key="KeyF" src="media/openhat.wav"></audio>
-<audio data-key="KeyG" src="media/cowbell.wav"></audio>
-<audio data-key="KeyH" src="media/heavy.wav"></audio>
-<audio data-key="KeyJ" src="media/snare.wav"></audio>
-<audio data-key="KeyK" src="media/tom.wav"></audio>
-<audio data-key="KeyL" src="media/clave.wav"></audio>
+<audio data-code="KeyA" data-keycode="65" src="media/clap.wav"></audio>
+<audio data-code="KeyS" data-keycode="83" src="media/shaker.wav"></audio>
+<audio data-code="KeyD" data-keycode="68" src="media/kick.wav"></audio>
+<audio data-code="KeyF" data-keycode="70" src="media/openhat.wav"></audio>
+<audio data-code="KeyG" data-keycode="71" src="media/cowbell.wav"></audio>
+<audio data-code="KeyH" data-keycode="72" src="media/heavy.wav"></audio>
+<audio data-code="KeyJ" data-keycode="74" src="media/snare.wav"></audio>
+<audio data-code="KeyK" data-keycode="75" src="media/tom.wav"></audio>
+<audio data-code="KeyL" data-keycode="76" src="media/clave.wav"></audio>
 
 
 <script src="./index.js"></script>
