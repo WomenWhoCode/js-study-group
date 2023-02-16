@@ -1,56 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        label {
+            margin-right: 10px;
+            flex-basis: 30%;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .input-container {
+            display: flex;
+        }
+
+        .input-primary {
+            border: none;
+            background-color: #D9D9D9;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            flex-basis: 70%;
+
+        }
+
+        .btn-primary {
+            border: none;
+            background-color: #620D4F;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 6px 50px;
+            font-size: 20px;
+        }
+
+        .list-separator {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .list-separator-decoration {
+            border-bottom: 1px dashed;
+            height: 0;
+            margin: auto 10px;
+            flex-grow: 1;
+        }
+        hr {
+            width: 100%;
+            color: black;
+        }
+    </style>
 
     <title>Coding Warmer - E1 </title>
 </head>
+
 <body>
-    
-   
-        <h1>Purchase Receipt</h1>
-        
-       
-        <section>
-            <div> 
-             <div>
-                 <ion-label>Article:</ion-label>
-             </div>
-               <div>
-                  <input type="text" placeholder="Example: Apples" id="itemDescription"/>
-               </div>
+    <h1>Purchase Receipt</h1>
+    <section class="main-container">
+        <div>
+            <div class="input-container">
+                <label>Article</label>
+                <input type="text" class="input-primary" id="itemDescription" aria-label="Type in the description" />
             </div>
+            <div class="input-container">
+                <label>Amount</label>
+                <input class="input-primary" id="itemPrice" aria-label="Type in the description" />
+            </div>
+        </div>
 
-            <div>
-                <div>
-                    <ion-label>Amount:</ion-label>
-                </div>
-                <div>
-                    <input type="number" placeholder="Example: $3" id="itemPrice" />
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <button onclick="insertItem">Calculate Total</button>
-                </div>
-            </div>
+        <div>
+            <button class="btn-primary" onclick="insertItem()">Calculate Total</button>
+        </div>
 
-            <div>
-                <div>
-                    <ul id="itemList">
-                        <!--List of ticket articles here-->
-                    </ul>
-                </div>
-            </div>
-            <p >
-                Total: $
-                <span id="ticketTotal">0</span>
-            </p>
-        </section>
-    
+        <div class="list-separator">
+            <span class="list-separator-decoration"></span>
+            <p>YOUR RECEIPT</p>
+            <span class="list-separator-decoration"></span>
+        </div>
+    <div>
+        <div>
+            <ul id="itemList">
+                <span id="listItemDescription"></span>
+                <!--List of ticket articles here-->
+            </ul>
+        </div>
+    </div>
+        <hr>
+        <p>
+            Total: $
+            <span id="ticketTotal">0</span>
+        </p>
+    </section>
+
 </body>
 <script src="index.js"></script>
+
+</html>
+<script src="index.js"></script>
+
 </html>
