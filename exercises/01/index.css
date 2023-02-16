@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+    padding: 0.5rem;
+   
+ 
+}
+
+input {
+    border:none;
+    background-color: rgb(181, 181, 181);
+    padding: 0.25rem;
+    color: white;
+    
+}
+
+::placeholder {
+    color: white;
+}
+
