@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles.css">
     <title>Coding Warmer - E1 </title>
 </head>
+
 <body>
-    
-   
-        <h1>Purchase Receipt</h1>
-        
-       
-        <section>
-            <div> 
-             <div>
-                 <ion-label>Article:</ion-label>
-             </div>
-               <div>
-                  <input placeholder="Example: Apples" id="description"/>
-               </div>
-            </div>
 
-            <div>
-                <div>
-                    <ion-label>Amount:</ion-label>
-                </div>
-                <div>
-                    <ion-input placeholder="Example: $3" id="amount"></ion-input>
-                </div>
-            </div>
 
-            <div>
-                <div>
-                    <button>Calculate Total</button>
-                </div>
+    <div class="frame">
+        <form id="form">
+            <div class="input article-input">
+                <label class="label" for="article">Article</label>
+                <input class='field' type="text" name="article" id="article" required />
             </div>
+            <div class="input amount-input">
+                <label class="label" for="amount">Amount</label>
+                <input class='field' type="number" name="amount" id="amount" required />
+            </div>
+            <div class="button-container">
+            <button id="submit-btn" type="submit">Calculate Total</button>
+        </div>
+        </form>
+        <div class="receipt">
+            <p class="receipt-header">======= YOUR RECEIPT =======</p>
+            <table id="receipt-table">
+            </table>
+            <hr class="hr">
+            <div id="total">
+                <p id="total-text">TOTAL</p>
+                <p id="total-amount"></p>
+            </div>
+        </div>
+    </div>
 
-            <div>
-                <div>
-                    <ul id="ticket">
-                        <!--List of ticket articles here-->
-                    </ul>
-                </div>
-            </div>
-            <p id="total">
-                Total: <!--Total here-->
-            </p>
-        </section>
-    
 </body>
 <script src="index.js"></script>
+
 </html>
