@@ -14,6 +14,7 @@ h1 {
     justify-content: space-between;
     max-width: 50%;
     padding: 0.5rem;
+    
    
  
 }
@@ -23,6 +24,7 @@ input {
     background-color: rgb(181, 181, 181);
     padding: 0.25rem;
     color: white;
+    margin: auto 1rem;
     
 }
 
@@ -30,3 +32,26 @@ input {
     color: white;
 }
 
+button {
+   
+  
+    background-color: rgb(90,22,77);
+    /* border: none; */
+    border-color: rgb(90,22,77) ;
+    border-style: none;
+    border-radius: 100px;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 8px 50px;
+  
+}
+
+li {
+    list-style: none;
+    
+}
