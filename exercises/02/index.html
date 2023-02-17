@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF=8">
     <title>JS Drum Kit - E2</title>
 </head>
+
 <body>
 
-<div class="keys">
-    <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">clap</span>
-    </div>
-    <div data-key="83" class="key">
-        <kbd>S</kbd>
-        <span class="sound">hihat</span>
-    </div>
-    <div data-key="68" class="key">
-        <kbd>D</kbd>
-        <span class="sound">kick</span>
-    </div>
-    <div data-key="70" class="key">
-        <kbd>F</kbd>
-        <span class="sound">openhat</span>
-    </div>
-    <div data-key="71" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
-    </div>
-    <div data-key="72" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
-    </div>
-    <div data-key="74" class="key">
-        <kbd>J</kbd>
-        <span class="sound">snare</span>
-    </div>
-    <div data-key="75" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
-    </div>
-    <div data-key="76" class="key">
-        <kbd>L</kbd>
-        <span class="sound">tink</span>
-    </div>
-</div>
+    <div class="keys">
+        <div data-key="KeyA" class="key">
+            <kbd>A</kbd>
+            <button onclick="playSound('media/clap.wav')" class="sound">clap</button>
+        </div>
+        <div data-key="KeyS" class="key">
+            <kbd>S</kbd>
+            <button onclick="playSound('media/hihat.wav')" class="sound">hihat</button>
+        </div>
+        <div data-key="KeyD" class="key">
+            <kbd>D</kbd>
+            <button onclick="playSound('media/kick.wav')" class="sound">kick</button>
+        </div>
+        <div data-key="KeyF" class="key">
+            <kbd>F</kbd>
+            <button onclick="playSound('media/openhat.wav')" class="sound">openhat</button>
+        </div>
+        <div data-key="KeyG" class="key">
+            <kbd>G</kbd>
+            <button onclick="playSound('media/cowbell.wav')" class="sound">boom</button>
+        </div>
+        <div data-key="KeyH" class="key">
+            <kbd>H</kbd>
+            <button onclick="playSound('media/heavy.wav')" class="sound">ride</button>
 
-<audio data-key="65" src="sounds/clap.wav"></audio>
-<audio data-key="83" src="sounds/shaker.wav"></audio>
-<audio data-key="68" src="sounds/kick.wav"></audio>
-<audio data-key="70" src="sounds/openhat.wav"></audio>
-<audio data-key="71" src="sounds/cowbell.wav"></audio>
-<audio data-key="72" src="sounds/heavy.wav"></audio>
-<audio data-key="74" src="sounds/snare.wav"></audio>
-<audio data-key="75" src="sounds/tom.wav"></audio>
-<audio data-key="76" src="sounds/clave.wav"></audio>
+        </div>
+        <div data-key="KeyJ" class="key">
+            <kbd>J</kbd>
+            <button onclick="playSound('media/snare.wav')" class="sound">snare</button>
+        </div>
+        <div data-key="KeyK" class="key">
+            <kbd>K</kbd>
+            <button onclick="playSound('media/tom.wav')" class="sound">tom</button>
 
+        </div>
+        <div data-key="KeyL" class="key">
+            <kbd>L</kbd>
+            <button onclick="playSound('media/clave.wav')" class="sound">tink</button>
 
+        </div>
+    </div>
+
+    <audio data-key="KeyA" src="media/clap.wav"></audio>
+    <audio data-key="KeyS" src="media/shaker.wav"></audio>
+    <audio data-key="KeyD" src="media/kick.wav"></audio>
+    <audio data-key="KeyF" src="media/openhat.wav"></audio>
+    <audio data-key="KeyG" src="media/cowbell.wav"></audio>
+    <audio data-key="KeyH" src="media/heavy.wav"></audio>
+    <audio data-key="KeyJ" src="media/snare.wav"></audio>
+    <audio data-key="KeyK" src="media/tom.wav"></audio>
+    <audio data-key="KeyL" src="media/clave.wav"></audio>
+
+    <script src="index.js"></script>
 
 </body>
+
 </html>
