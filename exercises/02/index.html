@@ -4,50 +4,44 @@
 <head>
     <meta charset="UTF=8">
     <title>JS Drum Kit - E2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-    <div class="keys">
-        <div data-key="KeyA" class="key">
-            <kbd>A</kbd>
-            <button onclick="playSound('media/clap.wav')" class="sound">clap</button>
-        </div>
-        <div data-key="KeyS" class="key">
-            <kbd>S</kbd>
-            <button onclick="playSound('media/hihat.wav')" class="sound">hihat</button>
-        </div>
-        <div data-key="KeyD" class="key">
-            <kbd>D</kbd>
-            <button onclick="playSound('media/kick.wav')" class="sound">kick</button>
-        </div>
-        <div data-key="KeyF" class="key">
-            <kbd>F</kbd>
-            <button onclick="playSound('media/openhat.wav')" class="sound">openhat</button>
-        </div>
-        <div data-key="KeyG" class="key">
-            <kbd>G</kbd>
-            <button onclick="playSound('media/cowbell.wav')" class="sound">boom</button>
-        </div>
-        <div data-key="KeyH" class="key">
-            <kbd>H</kbd>
-            <button onclick="playSound('media/heavy.wav')" class="sound">ride</button>
-
-        </div>
-        <div data-key="KeyJ" class="key">
-            <kbd>J</kbd>
-            <button onclick="playSound('media/snare.wav')" class="sound">snare</button>
-        </div>
-        <div data-key="KeyK" class="key">
-            <kbd>K</kbd>
-            <button onclick="playSound('media/tom.wav')" class="sound">tom</button>
-
-        </div>
-        <div data-key="KeyL" class="key">
-            <kbd>L</kbd>
-            <button onclick="playSound('media/clave.wav')" class="sound">tink</button>
-
-        </div>
+    <h2>JS Drum Kit</h2>
+        <div class=" row keys-container">
+            <div class="keys">
+                <div data-key="KeyA" class="key">
+                    <button onclick="playSound('media/clap.wav')" class="sound">Press A for clap</button>
+                </div>
+                <div data-key="KeyS" class="key">
+                    <button onclick="playSound('media/hihat.wav')" class="sound">Press S for hihat</button>
+                </div>
+                <div data-key="KeyD" class="key">
+                    <button onclick="playSound('media/kick.wav')" class="sound">Press D for kick</button>
+                </div>
+                <div data-key="KeyF" class="key">
+                    <button onclick="playSound('media/openhat.wav')" class="sound">Press F for openhat</button>
+                </div>
+                <div data-key="KeyG" class="key">
+                    <button onclick="playSound('media/cowbell.wav')" class="sound">Press G for boom</button>
+                </div>
+                <div data-key="KeyH" class="key">
+                    <button onclick="playSound('media/heavy.wav')" class="sound">Press H for ride</button>
+                </div>
+                <div data-key="KeyJ" class="key">
+                    <button onclick="playSound('media/snare.wav')" class="sound">Press J for snare</button>
+                </div>
+                <div data-key="KeyK" class="key">
+                    <button onclick="playSound('media/tom.wav')" class="sound">Press K for tom</button>
+                </div>
+                <div data-key="KeyL" class="key">
+                    <button onclick="playSound('media/clave.wav')" class="sound">Press L for tink</button>
+                </div>
+            </div>
     </div>
 
     <audio data-key="KeyA" src="media/clap.wav"></audio>

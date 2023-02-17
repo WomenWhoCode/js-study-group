@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #317773;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.keys-container {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    margin: auto;
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+.keys {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.sound {
+    margin: 12px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #E2D1F9;
+    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+}
