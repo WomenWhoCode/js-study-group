@@ -4,11 +4,11 @@ This is a digital drum kit. From a set of drum keys (buttons) and a set of sound
 
 
 ### UI
-9 buttons or divs with following letters *A, S, D, F, G, H, J, K, L*, and 9 audios with src from the media fodler sounds. Both keys and audios share a data-key value (65, 83, 68, 70, 71, 72, 74, 75, 76 from A to L) <br>
+9 buttons or divs with following letters *A, S, D, F, G, H, J, K, L*, and 9 audios with src from the media folder sounds. Both keys and audios share a data-key value (65, 83, 68, 70, 71, 72, 74, 75, 76 from A to L) <br>
 
 
 ## Functionality 
-You will need to add an event listener to the window to listen  every time user types a key from keyboard, the code of each key eill be queried between the audios based on the data-key attribute, if it 
+You will need to add an event listener to the window to listen  every time user types a key from keyboard, the code of each key will be queried between the audios based on the data-key attribute, if it 
 
 
 ## Javascript Topics:
