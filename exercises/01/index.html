@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Coding Warmer - E1 </title>
-</head>
-<body>
+    <title>Coding Warmer - E1</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
     
-   
-        <h1>Purchase Receipt</h1>
-        
-       
-        <section>
-            <div> 
-             <div>
-                 <ion-label>Article:</ion-label>
-             </div>
-               <div>
-                  <input placeholder="Example: Apples" id="description"/>
-               </div>
-            </div>
+  <body>
+    <form class="container" id="receiptForm">
+      <section>
+        <div class="input-container">
+          <div>
+            <ion-label class="label-typography typography">Article</ion-label>
+          </div>
+          <div>
+            <input
+              class="input-box"
+              id="article"
+            />
+          </div>
+        </div>
 
-            <div>
-                <div>
-                    <ion-label>Amount:</ion-label>
-                </div>
-                <div>
-                    <ion-input placeholder="Example: $3" id="amount"></ion-input>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <button>Calculate Total</button>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <ul id="ticket">
-                        <!--List of ticket articles here-->
-                    </ul>
-                </div>
-            </div>
-            <p id="total">
-                Total: <!--Total here-->
-            </p>
+        <div class="input-container">
+          <div>
+            <ion-label class="label-typography">Amount</ion-label>
+          </div>
+          <div>
+            <input
+              class="input-box"
+              id="amount"
+            ></input>
+          </div>
+        </div>
+        <button type="submit" class="total"><span class="text typography">Calculate Total</span></button>
         </section>
-    
-</body>
-<script src="index.js"></script>
+    </form>
+    <div class="container">
+        <p class="receipt typography">======= YOUR RECEIPT =========</p>
+
+            <div id="ticketContainer">
+            </div>
+          <div class="divider"></div>
+        <p id="total" class="label-typography sum">
+          <b>TOTAL $<span id="sum"><b></b></span></b>
+        </p>
+      </section>
+    </div>
+  </body>
+  <script src="index.js"></script>
 </html>
