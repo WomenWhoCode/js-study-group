@@ -3,59 +3,61 @@
 <head>
     <meta charset="UTF=8">
     <title>JS Drum Kit - E2</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="keys">
     <div data-key="65" class="key">
-        <kbd>A</kbd>
-        <span class="sound">clap</span>
+        <kbd class="keyboard-key">A</kbd>
+        <span class="sound">CLAP</span>
     </div>
     <div data-key="83" class="key">
-        <kbd>S</kbd>
-        <span class="sound">hihat</span>
+        <kbd class="keyboard-key">S</kbd>
+        <span class="sound">HIHAT</span>
     </div>
     <div data-key="68" class="key">
-        <kbd>D</kbd>
-        <span class="sound">kick</span>
+        <kbd class="keyboard-key">D</kbd>
+        <span class="sound">KICK</span>
     </div>
     <div data-key="70" class="key">
-        <kbd>F</kbd>
-        <span class="sound">openhat</span>
+        <kbd class="keyboard-key">F</kbd>
+        <span class="sound">OPENHAT</span>
     </div>
     <div data-key="71" class="key">
-        <kbd>G</kbd>
-        <span class="sound">boom</span>
+        <kbd class="keyboard-key">G</kbd>
+        <span class="sound">BOOM</span>
     </div>
     <div data-key="72" class="key">
-        <kbd>H</kbd>
-        <span class="sound">ride</span>
+        <kbd class="keyboard-key">H</kbd>
+        <span class="sound">RIDE</span>
     </div>
     <div data-key="74" class="key">
-        <kbd>J</kbd>
-        <span class="sound">snare</span>
+        <kbd class="keyboard-key">J</kbd>
+        <span class="sound">SNARE</span>
     </div>
     <div data-key="75" class="key">
-        <kbd>K</kbd>
-        <span class="sound">tom</span>
+        <kbd class="keyboard-key">K</kbd>
+        <span class="sound">TOM</span>
     </div>
     <div data-key="76" class="key">
-        <kbd>L</kbd>
-        <span class="sound">tink</span>
+        <kbd class="keyboard-key">L</kbd>
+        <span class="sound">TINK</span>
     </div>
 </div>
 
-<audio data-key="65" src="sounds/clap.wav"></audio>
-<audio data-key="83" src="sounds/shaker.wav"></audio>
-<audio data-key="68" src="sounds/kick.wav"></audio>
-<audio data-key="70" src="sounds/openhat.wav"></audio>
-<audio data-key="71" src="sounds/cowbell.wav"></audio>
-<audio data-key="72" src="sounds/heavy.wav"></audio>
-<audio data-key="74" src="sounds/snare.wav"></audio>
-<audio data-key="75" src="sounds/tom.wav"></audio>
-<audio data-key="76" src="sounds/clave.wav"></audio>
+<audio data-key="65" src="./media/clap.wav"></audio>
+<audio data-key="83" src="./media/shaker.wav"></audio>
+<audio data-key="68" src="./media/kick.wav"></audio>
+<audio data-key="70" src="./media/openhat.wav"></audio>
+<audio data-key="71" src="./media/cowbell.wav"></audio>
+<audio data-key="72" src="./media/heavy.wav"></audio>
+<audio data-key="74" src="./media/snare.wav"></audio>
+<audio data-key="75" src="./media/tom.wav"></audio>
+<audio data-key="76" src="./media/clave.wav"></audio>
 
 
 
 </body>
+<script src="index.js"></script>
 </html>
