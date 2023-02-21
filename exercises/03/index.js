@@ -27,15 +27,10 @@ keys.addEventListener('click', (event) => {
       action === 'multiply' ||
       action === 'divide'
     ) {
-      key.classList.add('is-pressed');
       calculator.dataset.previousKeyType = 'operator';
       calculator.dataset.firstValue = displayedNum;
       calculator.dataset.operator = action;
     }
-
-    Array.from(key.parentNode.children).forEach((key) =>
-      key.classList.remove('is-pressed')
-    );
 
     if (action === 'clear') {
       display.textContent = '';

@@ -8,41 +8,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles.css">
     <title>JS Calculator - E3</title>
 </head>
 
 <body>
     <div class="container">
-    <h2>Calculator</h2>
+    <h3 class="header">Calculator</h3>
     <div class="calculator">
         <div class="calculator__display" id="display"></div>
         <div class="calculator__keys">
             <div class="row">
-                <button class="num-button" id="one" value=1>1</button>
-                <button class="num-button" id="two" value=2>2</button>
-                <button class="num-button" id="three" value=3>3</button>
+                <button class="key--number" id="one" value=1>1</button>
+                <button class="key--number" id="two" value=2>2</button>
+                <button class="key--number" id="three" value=3>3</button>
                 <button class="key--operator" data-action="add" value="+">+</button>
             </div>
             <div class="row">
-                <button class="num-button" id="four" value=4>4</button>
-                <button class="num-button" id="five" value=5>5</button>
-                <button class="num-button" id="six" value=6>6</button>
+                <button class="key--number" id="four" value=4>4</button>
+                <button class="key--number" id="five" value=5>5</button>
+                <button class="key--number" id="six" value=6>6</button>
                 <button class="key--operator" data-action="subtract" value="-">-</button>
             </div>
             <div class="row">
-                <button class="num-button" id="seven" value=7>7</button>
-                <button class="num-button" id="eight" value=8>8</button>
-                <button class="num-button" id="nine" value=9>9</button>
+                <button class="key--number" id="seven" value=7>7</button>
+                <button class="key--number" id="eight" value=8>8</button>
+                <button class="key--number" id="nine" value=9>9</button>
                 <button class="key--operator" data-action="multiply" value="*">X</button>
             </div>
             <div class="row">
-                <button class="num-button" id="zero" value=0>0</button>
-                <button class="num-button" data-action="decimal">.</button>
+                <button class="key--number" id="zero" value=0>0</button>
+                <button class="key--number" data-action="decimal">.</button>
                 <button class="key--equal" data-action="equals">=</button>
                 <button class="key--operator" data-action="divide">/</button>
             </div>
-            <button class="clear-button" data-action="clear">Clear</button>
+            <button class="key--clear" data-action="clear">Clear</button>
         </div>
         
     </div>
