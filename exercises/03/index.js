@@ -2,25 +2,24 @@ class Calculator {
     constructor() {
         this.currentValue = '';
         this.previousValue = '';
-        // this.totalParagraph = document.querySelector('.total');
-        // this.currentCalcParagraph = document.querySelector('.current-calc')
     }
 
-    // updateParagraph() {
-    //     if (!this.total) {
-    //         this.totalParagraph.textContent = '0';
-    //     } else {
-    //         this.totalParagraph.textContent = this.total;
-    //     }
-    // }
+    populateCalcDisplay(topValue, bottomValue) {
+        const displayTop = document.querySelector('.calculator-display-top');
+        const displayBottom = document.querySelector('.calculator-display-bottom');
+        displayTop.textContent = topValue;
+        displayBottom.textContent = bottomValue;
+    }
 
     clearAllValues() {
         this.currentValue = '';
         this.previousValue = '';
         this.operator = '';
+        this.total = '';
+        this.populateCalcDisplay('0', '0');
     }
 
-    compute(a, b, operator) {
+    calculate(a, b, operator) {
         this.operations = {
             '+': function (a, b) {
                 return a + b
@@ -33,66 +32,86 @@ class Calculator {
             },
             '/': function (a, b) {
                 return a / b
-            }
+            },
         }
         return this.operations[operator](a, b);
     }
 
-    initializeNumberButtons() {
+    updatePreviousValue(operatorValue) {
+        this.previousValue = Number(this.currentValue);
+        this.operator = operatorValue;
+        this.currentValue = '';
+        this.populateCalcDisplay(`${this.previousValue} ${this.operator}`, '0');
+    }
+
+    computeValues(value, operator) {
+        this.currentValue = Number(this.currentValue);
+        this[value] = this.calculate(this.previousValue, this.currentValue, this.operator);
+        this.operator = operator;
+        this.currentValue = '';
+    }
+
+    initializeNumberBtns() {
         const numberButtons = document.querySelectorAll('[data-type="float-number-el"]');
         numberButtons.forEach((numberBtn) => {
             numberBtn.addEventListener('click', (e) => {
                 this.currentValue += e.target.value;
-                console.log(this);
+                if (this.total) {
+                    this.clearAllValues();
+                    return
+                }
+                if (!this.previousValue) {
+                    this.populateCalcDisplay('0', this.currentValue)
+                }
+                else {
+                    this.populateCalcDisplay(`${this.previousValue} ${this.operator}`, this.currentValue)
+                } 
             });
         });
     }
 
-    initializeOperatorButtons() {
+    initializeOperatorBtns() {
         const operatorButtons = document.querySelectorAll('[data-type="operator"]');
         operatorButtons.forEach((operatorBtn) => {
             operatorBtn.addEventListener('click', (e) => {
-                if (!this.previousValue) {
-                    this.previousValue = Number(this.currentValue);
-                    this.operator = e.target.value;
-                    this.currentValue = '';
-                    this.total = 0;
-                    console.log(this);
-                } else {
-                    this.currentValue = Number(this.currentValue);
-                    this.previousValue = this.compute(this.previousValue, this.currentValue, this.operator);
-                    this.currentValue = '';
-                    this.operator = e.target.value;
-                    console.log(this);
+                const operatorValue = e.target.value;
+                if (this.total) {
+                    this.clearAllValues();
+                    return
+                }
+                else if (!this.previousValue) {
+                    this.updatePreviousValue(operatorValue)
+                }
+                else {
+                    this.computeValues('previousValue', operatorValue)
+                    this.populateCalcDisplay(`${this.previousValue} ${this.operator}`, '0')
                 }
             });
         });
     }
 
-    initializeClear() {
+    initializeClearBtn() {
         const clearButton = document.querySelector('[data-type="clear"]');
         clearButton.addEventListener('click', () => {
             this.clearAllValues();
-            console.log(this);
         });
     }
 
-    initializeEqual() {
+    initializeEqualBtn() {
         const equalButton = document.querySelector('[data-type="equal"]')
-        equalButton.addEventListener('click', () => {
-            this.currentValue = Number(this.currentValue);
-            this.total = this.compute(this.previousValue, this.currentValue, this.operator);
-            this.clearAllValues();
-            console.log(this);
+        equalButton.addEventListener('click', (e) => {
+            this.computeValues('total', '')
+            this.populateCalcDisplay(e.target.value, this.total)
+            this.previousValue = '';
         });
     }
-    // method to update div in the DOM that shows the total
 }
 
 window.addEventListener('load', () => {
     const calculator = new Calculator();
-    calculator.initializeNumberButtons();
-    calculator.initializeOperatorButtons();
-    calculator.initializeClear();
-    calculator.initializeEqual();
+    calculator.initializeNumberBtns();
+    calculator.initializeOperatorBtns();
+    calculator.initializeClearBtn();
+    calculator.initializeEqualBtn();
+    calculator.populateCalcDisplay('0', '0');
 });
