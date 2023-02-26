@@ -4,33 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WWC JS Study Group Exercise 3</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="calculator-display">
-        <p class="calculator-display-top"></p>
-        <p class="calculator-display-bottom"></p>
-    </div>
-
-    <div class="calculator-container">
-        <button class="calculator-button" value="1" data-type="float-number-el">1</button>
-        <button class="calculator-button" value="2" data-type="float-number-el">2</button>
-        <button class="calculator-button" value="3" data-type="float-number-el">3</button>
-        <button class="calculator-button" value="4" data-type="float-number-el">4</button>
-        <button class="calculator-button" value="5" data-type="float-number-el">5</button>
-        <button class="calculator-button" value="6" data-type="float-number-el">6</button>
-        <button class="calculator-button" value="7" data-type="float-number-el">7</button>
-        <button class="calculator-button" value="8" data-type="float-number-el">8</button>
-        <button class="calculator-button" value="9" data-type="float-number-el">9</button>
-        <button class="calculator-button" value="0" data-type="float-number-el">0</button>
-        <button class="calculator-button" value="." data-type="float-number-el">.</button>
-        <button class="calculator-button" value="=" data-type="equal">=</button>
-        <button class="calculator-button" value="+" data-type="operator">+</button>
-        <button class="calculator-button" value="-" data-type="operator">-</button>
-        <button class="calculator-button" value="*" data-type="operator">x</button>
-        <button class="calculator-button" value="/" data-type="operator">/</button>
-        <button class="calculator-button" value="clear" data-type="clear">Clear</button>
-    </div>
+    <section class="calculator">
+        <div class="calculator-display">
+            <p class="calculator-display-top"></p>
+            <p class="calculator-display-bottom"></p>
+        </div>
+    
+        <div class="calculator-grid">
+            <div class="calculator-numbers">
+                <button class="calculator-button" value="1" data-type="float-number-el">1</button>
+                <button class="calculator-button" value="2" data-type="float-number-el">2</button>
+                <button class="calculator-button" value="3" data-type="float-number-el">3</button>
+                <button class="calculator-button" value="4" data-type="float-number-el">4</button>
+                <button class="calculator-button" value="5" data-type="float-number-el">5</button>
+                <button class="calculator-button" value="6" data-type="float-number-el">6</button>
+                <button class="calculator-button" value="7" data-type="float-number-el">7</button>
+                <button class="calculator-button" value="8" data-type="float-number-el">8</button>
+                <button class="calculator-button" value="9" data-type="float-number-el">9</button>
+                <button class="calculator-button" value="0" data-type="float-number-el">0</button>
+                <button class="calculator-button" value="." data-type="float-number-el">.</button>
+                <button class="calculator-button" value="=" data-type="equal">=</button>
+            </div>
+            <div class="calculator-operators">
+                <button class="calculator-button" value="+" data-type="operator">+</button>
+                <button class="calculator-button" value="-" data-type="operator">-</button>
+                <button class="calculator-button" value="*" data-type="operator">x</button>
+                <button class="calculator-button" value="/" data-type="operator">/</button>
+            </div>
+            <button class="calculator-button grid-col-span-4" value="clear" data-type="clear">Clear</button>
+        </div>
+    </section>
 
     <script src="./index.js" type="text/javascript"></script>
 </body>
