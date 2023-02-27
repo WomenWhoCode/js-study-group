@@ -4,7 +4,7 @@
 
 
 ## About the Javascript Study Group
-Have you taken JS trainings but now looking for fun exercises? Join the Javascript Study Group! It is a safe-spaced study group where we will work on 10 exercises to practice everything you learned!
+Have you taken JS trainings but now looking for fun exercises? Join the Javascript Study Group! It is a self-spaced study group where we will work on 10 exercises to practice everything you learned!
 
 All coding levels are invited, we will have material for reference and an amazing community to peer review our solutions!
 
@@ -26,21 +26,24 @@ The Javascript Study Group will be a 24/7, community based group! We will post a
 *Week 1*
 -CODING WARM UP - Ticket (Feb 8th) <br>
 -Drum Kit (Feb 10th)<br>
--Flex panels (Feb 13th) <br>
 -CODING BONUS (Feb 15th)<br>
 
 *Week 2*
--CODING BONUS (Feb 18th) <br>
--Array Cardio 1 (Feb 21th)<br>
+-Flex panels (Feb 24th) <br>
+-CODING BONUS (Feb 25th) <br>
 
 *Week 3*
--Webcam fun (Feb 23th) <br>
--Sticky Nav (Feb 27th)<br>
+-Webcam fun (Feb 28th) <br>
+-Array Cardio 1 (March 1st)<br>
+-Sticky Nav (March 4th)<br>
 
 *Week 4*
--Countdown clock (March 1st) <br>
--Array Cardio 2 (March 6th) <br>
--CODING BONUS (March 8th)<br>
+-Countdown clock (March 6th) <br>
+-Array Cardio 2 (March 9th) <br>
+
+*Week 5* **NEW!**
+-CODING BONUS (March 14th)<br>
+
 
 Initial HTML will be posted in this Github repository, you can clone it or fork it.
 
