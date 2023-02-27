@@ -1,27 +1,14 @@
-let articulo = document.getElementById("article");
-let precio = document.getElementById("price");
+let newAmount=0;
 
-let listArticles = document.getElementById("list");
-let totalMSG = document.getElementById("total"); 
+function update(description, amount) {
 
-let total = 0;
-
-
-function addToTicket(){
-    let articleStr = article.value;
-    let priceStr = precio.value;
-
-
-    let listElement = document.createElement("li");
-    listElement.innerHTML = articleStr + " $" + priceStr;
-
-    listArticles.appendChild(elementoLista);
-
-
-    article.value = "";
-    price.value = "";
-
+    let list;
+    list=`<li>${description} $${amount}</li>`
     
-    total = total + priceStr; 
-    console.log(total);
+    newAmount= newAmount+ Number(amount);
+    
+
+    document.getElementById("ticket").insertAdjacentHTML("afterbegin",list) 
+    document.getElementById("total").innerHTML=`Total:$ ${newAmount}`
+    
 }

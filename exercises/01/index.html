@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="index.css">
     <title>Coding Warmer - E1 </title>
 </head>
 <body>
@@ -13,39 +13,50 @@
         <h1>Purchase Receipt</h1>
         
        
-        <div id="ticket">
-            <h2>Purchase Receipt</h2>
-    
-            <div class="row">
-                <label for="article">Article: </label>
-                <input type="text" id="article" class="text-field">
+        <section>
+            <div class="item-info"> 
+             <div >
+                 <ion-label>Article </ion-label>
+             </div>
+               <div>
+                  <input placeholder="Example: Apples" id="description"/>
+               </div>
             </div>
-    
-           
-           <div class="row">
-            <label for="price">Price:</label>
-            <input type="number" id="price" class="text-field">
-           </div>
-    
-           
-    
-            <button id="calculateTotal" onclick="addToTicket()">Calculate Total</button>
-    
-    
-            <div id="ticket">
-                <p>========YOUR PURCHASE RECEIPT=======</p>
-               
-                <ul id="list">
-                    
-                </ul>
-                <p id="total">Total: $</p>
+
+            <div class="item-info">
+                <div>
+                    <ion-label>Amount </ion-label>
+                </div>
+                
+                <div>
+                    <input placeholder="Example: 3.25" id="amount" type="number"></input>
+                </div>
+
             </div>
-        </div>
-    
-    
-        <div id="content">
-           
-        </div>
+
+            <div>
+                <div>
+                    <button onclick="update(document.getElementById('description').value, document.getElementById('amount').value)">Calculate Total</button>
+                </div>
+
+                
+            </div>
+
+            <div>
+                <div >
+                    <ul id="ticket" >
+                        
+                        <!--List of ticket articles here-->
+                    </ul>
+                </div>
+            </div>
+            
+            <p id="total">
+                Total: <!--Total here-->
+            </p>
+
+              
+        </section>
     
 </body>
 <script src="index.js"></script>

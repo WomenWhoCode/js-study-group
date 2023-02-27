@@ -3,49 +3,51 @@
 <head>
     <meta charset="UTF=8">
     <title>JS Drum Kit - E2</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
 <div class="keys">
-    <div data-key="65" class="key">
+    <!-- data-key="65" -->
+     <div data-key="65" class="key">
         <kbd>A</kbd>
-        <span class="sound">clap</span>
+        <span class="sound">CLAP</span>
     </div>
     <div data-key="83" class="key">
         <kbd>S</kbd>
-        <span class="sound">hihat</span>
+        <span class="sound">HITHAT</span>
     </div>
     <div data-key="68" class="key">
         <kbd>D</kbd>
-        <span class="sound">kick</span>
+        <span class="sound">KICK</span>
     </div>
     <div data-key="70" class="key">
         <kbd>F</kbd>
-        <span class="sound">openhat</span>
+        <span class="sound">OPENHAT</span>
     </div>
     <div data-key="71" class="key">
         <kbd>G</kbd>
-        <span class="sound">boom</span>
+        <span class="sound">BOOM</span>
     </div>
     <div data-key="72" class="key">
         <kbd>H</kbd>
-        <span class="sound">ride</span>
+        <span class="sound">RIDE</span>
     </div>
     <div data-key="74" class="key">
         <kbd>J</kbd>
-        <span class="sound">snare</span>
+        <span class="sound">SNARE</span>
     </div>
     <div data-key="75" class="key">
         <kbd>K</kbd>
-        <span class="sound">tom</span>
+        <span class="sound">TOM</span>
     </div>
     <div data-key="76" class="key">
         <kbd>L</kbd>
-        <span class="sound">tink</span>
+        <span class="sound">TINK</span>
     </div>
 </div>
 
+<!-- changed from sounds to media  -->
 <audio data-key="65" src="media/clap.wav"></audio>
 <audio data-key="83" src="media/shaker.wav"></audio>
 <audio data-key="68" src="media/kick.wav"></audio>
@@ -59,6 +61,5 @@
 
 
 </body>
-
 <script src="index.js"></script>
 </html>
