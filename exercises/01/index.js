@@ -1,15 +1,15 @@
 const itemDescInput = document.querySelector('#description');
-const amountinput = document.querySelector('#amount');
+const amountInput = document.querySelector('#amount');
 
 const clearFields = () => {
     itemDescInput.value = '';
-    amountinput.value = '';
+    amountInput.value = '';
 }
 
-const calculateTotal = (array) => {
+const calculateTotal = (totalArray) => {
     const totalParagraph = document.querySelector('#total');
     let sumTotal = 0;
-    array.forEach(number => sumTotal += number)
+    totalArray.forEach(number => sumTotal += number)
     totalParagraph.textContent = `Total $${sumTotal}`
 }
 
@@ -24,14 +24,16 @@ const handleFormSubmit = () => {
         const newAmountP = document.createElement('p');
         newItemDescP.classList.add('capitalize')
         newItemDescP.textContent = itemDescInput.value;
-        newAmountP.textContent = `$${amountinput.value}`;
+        newAmountP.textContent = `$${amountInput.value}`;
         newListItem.append(newItemDescP, newAmountP);
         ticketUL.append(newListItem);
-        totalArray.push((Number(amountinput.value)));
+        totalArray.push((Number(amountInput.value)));
         calculateTotal(totalArray)
         clearFields();
     })
 }
 
-clearFields();
-handleFormSubmit();
+window.addEventListener('load', () => {
+    clearFields();
+    handleFormSubmit();
+})

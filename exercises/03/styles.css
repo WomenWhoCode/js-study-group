@@ -56,26 +56,6 @@ button {
     margin-bottom: 20px;
 }
 
-.calculator-button {
-    background-color: var(--color-grey-light);
-    padding: 10px;
-    transition: .2s;
-}
-
-.calculator-button:is(:hover, :focus) {
-    background-color: var(--color-pink-light);
-    color: var(--color-white);
-}
-
-.calculator-button[data-type="clear"] {
-    background-color: var(--color-pink-light);
-    color: var(--color-white);
-}
-
-.calculator-button[data-type="clear"]:is(:hover, :focus) {
-    background-color: var(--color-pink-dark);
-}
-
 .calculator-grid {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -94,8 +74,27 @@ button {
     margin-left: 10px;
 }
 
-.grid-col-span-4 {
+.calculator-button {
+    background-color: var(--color-grey-light);
+    padding: 10px;
+    transition: .2s;
+}
+
+.calculator-button:is(:hover, :focus) {
+    background-color: var(--color-pink-light);
+    color: var(--color-white);
+}
+
+.calculator-button[data-type="clear"] {
+    background-color: var(--color-pink-light);
+    color: var(--color-white);
     margin-top: 10px;
     grid-column: span 4;
 }
+
+.calculator-button[data-type="clear"]:is(:hover, :focus) {
+    background-color: var(--color-pink-dark);
+}
+
+
 
