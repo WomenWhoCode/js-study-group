@@ -1,0 +1,105 @@
+html {
+    box-sizing: border-box;
+    background: #ffc600;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.panel {
+    background: #6b0f9c;
+    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    /* Safari transitionend event.propertyName === flex */
+      /* Chrome + FF transitionend event.propertyName === flex-grow */
+      /* Transitioning font-size and flexbox size over 0.7s */
+    transition: 
+        font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position:  center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.panel-one {
+    background-image: url(../img/img-one.jpg);
+}
+
+.panel-two {
+    background-image: url(../img/img-two.jpg);
+}
+
+.panel-three {
+    background-image: url(../img/img-three.jpg);
+}
+
+.panel-four {
+    background-image: url(../img/img-four.jpg);
+}
+
+.panel-five {
+    background-image: url(../img/img-five.jpg);
+}
+
+.panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel > *:first-child { 
+    transform: translateY(-100%);
+}
+
+.panel.open-active > *:first-child { 
+    transform: translateY(0);
+}
+
+.panel > *:last-child {
+    transform: translateY(100%);
+}
+
+.panel.open-active > *:last-child { 
+    transform: translateY(0);
+}
+
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 32px;
+}
+
+.panel p:nth-child(2) {
+    font-size: 64px;
+}
+
+.panel.open {
+    font-size: 40px;
+    flex: 5;
+}
